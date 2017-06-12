@@ -1,0 +1,6 @@
+Similar Website to Mine: "Ranked: Best and Worst Movies Based on Videogames" by Metacritic
+
+Site URL:
+http://www.metacritic.com/feature/best-and-worst-movies-based-on-videogames
+
+Compared to my own website, there are some positive and negative differences in the Metacritic page. One advantage my page has is that it's generally simpler code, making it easier to understand, and is less dependant on creating a ton of relative paths for the links throughout the page. That said, the Metacritic's complexity of its source code is a testiment to how much the page was created through a wide variety of customizable options that make it stand out and appealing to viewers.
