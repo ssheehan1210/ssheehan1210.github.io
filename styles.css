@@ -1,4 +1,81 @@
 body {
 	background-color: blue;
 	color: white;
+	font-family: sans-serif;
+	margin: auto;
+	width: 960px;
+}
+
+h1 {
+	border: 3px solid red;
+	font-family: "Times New Roman";
+	padding-left: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+h2 {
+	border: 3px solid red;
+	font-family: "Times New Roman";
+	padding-left: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#movies {
+	display: block;
+	margin: auto;
+	width: 90%
+}
+
+.change {
+	text-align: center;
+}
+
+.shifty {
+	padding-left: 30px;
+}
+
+a:link {
+	color: red;
+}
+
+a:visited {
+	color: green;
+}
+
+a:hover {
+	color: coral;
+}
+
+a:active {
+	color: yellow;
+}
+
+table {
+	background: url(https://s-media-cache-ak0.pinimg.com/originals/0d/a1/98/0da1988286cce8d2f8077c3c846fef32.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul li a {
+	color: red;
+	text-decoration: none;
+	padding: 3px;
+	display: block;
+}
+
+footer {
+	text-align: center;
+}
+
+@media screen and (max-width: 699px) {
+    ul li a {
+    	padding-left: 30px;
+        background: url(http://www.gtechmedical.com/resources/email_icon_small.gif?timestamp=1403023687670) left center no-repeat;
+    }
 }
