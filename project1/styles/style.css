@@ -1,3 +1,383 @@
 * {
 	text-align: center;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.container-fluid {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.row {
+/*	margin-left: 0px;
+	margin-right: 0px;*/
+}
+
+div#title-row {
+	height: 11%;
+	background-color: grey;
+}
+
+div#title-display {
+	background-color: white;
+}
+
+#title-display h1 {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+div#category-row {
+	height: 13%;
+	background-color: blue;
+}
+
+div#category-one-title {
+	background-color: red;
+}
+
+div#category-two-title {
+	background-color: blue;
+}
+
+div#category-three-title {
+	background-color: pink;
+}
+
+div#category-four-title {
+	background-color: blue;
+}
+
+div#category-five-title {
+	background-color: red;
+}
+
+div#one-hundred-row {
+	height: 13%;
+	background-color: green;
+}
+
+div#C1-one-hundred {
+	background-color: red;
+}
+
+#C1-one-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C2-one-hundred {
+	background-color: blue;
+}
+
+#C2-one-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C3-one-hundred {
+	background-color: pink;
+}
+
+#C3-one-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C4-one-hundred {
+	background-color: blue;
+}
+
+#C4-one-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C5-one-hundred {
+	background-color: red;
+}
+
+#C5-one-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#two-hundred-row {
+	height: 13%;
+	background-color: yellow;
+}
+
+div#C1-two-hundred {
+	background-color: red;
+}
+
+#C1-two-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C2-two-hundred {
+	background-color: blue;
+}
+
+#C2-two-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C3-two-hundred {
+	background-color: pink;
+}
+
+#C3-two-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C4-two-hundred {
+	background-color: blue;
+}
+
+#C4-two-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C5-two-hundred {
+	background-color: red;
+}
+
+#C5-two-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#three-hundred-row {
+	height: 13%;
+	background-color: purple;
+}
+
+div#C1-three-hundred {
+	background-color: red;
+}
+
+#C1-three-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C2-three-hundred {
+	background-color: blue;
+}
+
+#C2-three-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C3-three-hundred {
+	background-color: pink;
+}
+
+#C3-three-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C4-three-hundred {
+	background-color: blue;
+}
+
+#C4-three-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C5-three-hundred {
+	background-color: red;
+}
+
+#C5-three-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#four-hundred-row {
+	height: 13%;
+	background-color: orange;
+}
+
+div#C1-four-hundred {
+	background-color: red;
+}
+
+#C1-four-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C2-four-hundred {
+	background-color: blue;
+}
+
+#C2-four-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C3-four-hundred {
+	background-color: pink;
+}
+
+#C3-four-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C4-four-hundred {
+	background-color: blue;
+}
+
+#C4-four-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C5-four-hundred {
+	background-color: red;
+}
+
+#C5-four-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#five-hundred-row {
+	height: 13%;
+	background-color: grey;
+}
+
+div#C1-five-hundred {
+	background-color: red;
+}
+
+#C1-five-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C2-five-hundred {
+	background-color: blue;
+}
+
+#C2-five-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C3-five-hundred {
+	background-color: pink;
+}
+
+#C3-five-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C4-five-hundred {
+	background-color: blue;
+}
+
+#C4-five-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#C5-five-hundred {
+	background-color: red;
+}
+
+#C5-five-hundred h5 {
+/*	vertical-align: middle;
+*/}
+
+div#players-row {
+	height: 11%;
+	background-color: red;
+}
+
+div#player-one-display {
+	height: 100%;
+	background-color: grey;
+}
+
+div#p1-points-display {
+	height: 50%;
+}
+
+h5#p1-points-display {
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	line-height: 2;
+}
+
+div#p1-turn-indicator {
+	height: 50%;
+}
+
+h5#p1-turn-indicator {
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+div#player-two-display {
+	height: 100%;
+	background-color: green;
+}
+
+div#p2-points-display {
+	height: 50%;
+}
+
+h5#p2-points-display {
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	line-height: 2;
+}
+
+div#p2-turn-indicator {
+	height: 50%;
+}
+
+h5#p2-turn-indicator {
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+div.textContainer {
+	padding: 1em 0;
+	height: 100%;
+}
+
+div.textContainer h4 {
+	margin: 0;
+	padding-bottom: 0.5em;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 2em;
+	font-size: 2.25vw;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+div.textContainer h5 {
+	margin: 0;
+	padding: 0.5em 0;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 2em;
+	font-size: 2.25vw;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+div.textContainer button {
+	margin: 0;
+	padding: 0;
+	width: 90%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 4em;
+	font-size: 2.25vw;
+	vertical-align: middle;
+	display: inline-block;
 }

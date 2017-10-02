@@ -1,3 +1,3 @@
-console.log("Window id running");
+console.log("Window is running");
 
 
