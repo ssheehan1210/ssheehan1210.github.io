@@ -9,9 +9,256 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="container-fluid">
+	<div id="active-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="active-modalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" id="question-space" role="document">
+			<div class="modal-content" id="question-content">
+				<div class="modal-header" id="question-header">
+					<div class="container-fluid" id="question-title-board">
+						<div class="row no-gutters" id="question-title-row">
+							<div class="col-1">
+								
+							</div>
+							<div class="col-10" id="question-title-display">
+								<h5 class="modal-title" id="active-modalLabel">Category Name - #00pts</h5>
+							</div>
+							<div class="col-1">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">x</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body" id="question-body">
+					<div class="container-fluid" id="question-board">
+						<div class="row no-gutters" id="modal-row-one">
+							<div class="col-5" id="question-p1-display">
+								<h6>Player 1</h6>
+								<h6 id="p1-points-counter">Points: #00</h6>
+							</div>
+							<div class="col-2" id="question-timer-display">
+								<h6>Timer</h6>
+								<h6 id="timer-counter">10s</h6>
+							</div>
+							<div class="col-5" id="question-p2-display">
+								<h6>Player 2</h6>
+								<h6 id="p2-points-counter">Points: #00</h6>
+							</div>
+						</div>
+						<div class="row no-gutters" id="modal-row-two">
+							<div class="col-5" id="question-p1-turn">
+								<h6>Your Turn!!!</h6>
+							</div>
+							<div class="col-2">
+								
+							</div>
+							<div class="col-5" id="question-p2-turn">
+								<h6>Your Turn!!!</h6>
+							</div>
+						</div>
+						<div class="row no-gutters" id="modal-row-three">
+							<div class="col-1">
+								
+							</div>
+							<div class="col-10" id="question-text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							</div>
+							<div class="col-1">
+								
+							</div>
+						</div>
+						<div class="row no-gutters" id="modal-row-four">
+							<div class="col-1">
+
+							</div>
+							<div class="col-10">
+								<h6>Your Answer:</h6>
+								<textarea class="form-control" id="message-text"></textarea>
+							</div>
+							<div class="col-1">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer" id="question-footer">
+					<button type="button" class="btn btn-primary" id="buzzer-button">Buzzer</button>
+					<button type="button" class="btn btn-secondary" id="answer-button" data-dismiss="modal">Submit Answer</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="answer-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="answer-modalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" id="answer-space" role="document">
+			<div class="modal-content" id="answer-content">
+				<div class="modal-header" id="answer-header">
+					<div class="container-fluid" id="answer-title-board">
+						<div class="row no-gutters" id="answer-title-row">
+							<div class="col-1">
+								
+							</div>
+							<div class="col-10" id="answer-title-display">
+								<h5 class="modal-title" id="answer-modalLabel">Category Name - #00pts</h5>
+							</div>
+							<div class="col-1">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">x</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body" id="answer-body">
+					<div class="container-fluid" id="answer-board">
+						<div class="row no-gutters" id="answer-modal-row-one">
+							<div class="col-5" id="answer-p1-display">
+								<h6>Player 1</h6>
+								<h6>Points: #00</h6>
+							</div>
+							<div class="col-2" id="answer-timer-display">
+								<h6>Timer</h6>
+								<h6>0s</h6>
+							</div>
+							<div class="col-5" id="answer-p2-display">
+								<h6>Player 2</h6>
+								<h6>Points: #00</h6>
+							</div>
+						</div>
+						<div class="row no-gutters" id="answer-modal-row-two">
+							<div class="col-5" id="answer-p1-turn">
+								<h6>Your Turn!!!</h6>
+							</div>
+							<div class="col-2">
+								
+							</div>
+							<div class="col-5" id="answer-p2-turn">
+								<h6>Your Turn!!!</h6>
+							</div>
+						</div>
+						<div class="row no-gutters" id="answer-modal-row-three">
+							<div class="col-1">
+								
+							</div>
+							<div class="col-10" id="answer-text">
+								<p>You are in the correct answer modal.</p>
+							</div>
+							<div class="col-1">
+								
+							</div>
+						</div>
+						<div class="row no-gutters" id="answer-modal-row-four">
+							<div class="col-1">
+
+							</div>
+							<div class="col-10">
+								<h6>Your Answer:</h6>
+								<textarea class="form-control" id="answer-message-text"></textarea>
+							</div>
+							<div class="col-1">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer" id="answer-footer">
+					<button type="button" class="btn btn-primary" id="return-button" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="incorrect-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="incorrect-modalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" id="incorrect-space" role="document">
+			<div class="modal-content" id="incorrect-content">
+				<div class="modal-header" id="incorrect-header">
+					<div class="container-fluid" id="incorrect-title-board">
+						<div class="row no-gutters" id="incorrect-title-row">
+							<div class="col-1">
+								
+							</div>
+							<div class="col-10" id="incorrect-title-display">
+								<h5 class="modal-title" id="incorrect-modalLabel">Category Name - #00pts</h5>
+							</div>
+							<div class="col-1">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">x</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body" id="incorrect-body">
+					<div class="container-fluid" id="incorrect-board">
+						<div class="row no-gutters" id="incorrect-modal-row-one">
+							<div class="col-5" id="incorrect-p1-display">
+								<h6>Player 1</h6>
+								<h6>Points: #00</h6>
+							</div>
+							<div class="col-2" id="incorrect-timer-display">
+								<h6>Timer</h6>
+								<h6>0s</h6>
+							</div>
+							<div class="col-5" id="incorrect-p2-display">
+								<h6>Player 2</h6>
+								<h6>Points: #00</h6>
+							</div>
+						</div>
+						<div class="row no-gutters" id="incorrect-modal-row-two">
+							<div class="col-5" id="incorrect-p1-turn">
+								<h6>Your Turn!!!</h6>
+							</div>
+							<div class="col-2">
+								
+							</div>
+							<div class="col-5" id="incorrect-p2-turn">
+								<h6>Your Turn!!!</h6>
+							</div>
+						</div>
+						<div class="row no-gutters" id="incorrect-modal-row-three">
+							<div class="col-1">
+								
+							</div>
+							<div class="col-10" id="incorrect-text">
+								<p>You are in the incorrect answer modal.</p>
+							</div>
+							<div class="col-1">
+								
+							</div>
+						</div>
+						<div class="row no-gutters" id="incorrect-modal-row-four">
+							<div class="col-1">
+
+							</div>
+							<div class="col-10">
+								<h6>Your Answer:</h6>
+								<textarea class="form-control" id="incorrect-message-text"></textarea>
+							</div>
+							<div class="col-1">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer" id="incorrect-footer">
+					<button type="button" class="btn btn-primary" id="incorrect-return-button" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <button id="test-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#active-modal">Test Button</button> -->
+
+	<div class="container-fluid" id="game-board">
 		<div class="row no-gutters" id="title-row">
 			<div class="col-1">
 				
@@ -62,27 +309,27 @@
 			</div>
 			<div class="col-2" id="C1-one-hundred">
 				<div class="textContainer">
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="C1-100pt-Answer">100</button>
+					<button id="cat1-100" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C1-100pt-Answer">100</button>
 				</div>
 			</div>
 			<div class="col-2" id="C2-one-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">100</button>
+					<button id="cat2-100" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C2-100pt-Answer">100</button>
 				</div>
 			</div>
 			<div class="col-2" id="C3-one-hundred">
 				<div class="textContainer">
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="C3-100pt-Answer">100</button>
+					<button id="cat3-100" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C3-100pt-Answer">100</button>
 				</div>
 			</div>
 			<div class="col-2" id="C4-one-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">100</button>
+					<button id="cat4-100" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C4-100pt-Answer">100</button>
 				</div>
 			</div>
 			<div class="col-2" id="C5-one-hundred">
 				<div class="textContainer">
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-whatever="C5-100pt-Answer">100</button>
+					<button id="cat5-100" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C5-100pt-Answer">100</button>
 				</div>
 			</div>
 			<div class="col-1">
@@ -95,27 +342,27 @@
 			</div>
 			<div class="col-2" id="C1-two-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">200</button>
+					<button id="cat1-200" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C1-200pt-Answer">200</button>
 				</div>
 			</div>
 			<div class="col-2" id="C2-two-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">200</button>
+					<button id="cat2-200" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C2-200pt-Answer">200</button>
 				</div>
 			</div>
 			<div class="col-2" id="C3-two-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">200</button>
+					<button id="cat3-200" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C3-200pt-Answer">200</button>
 				</div>
 			</div>
 			<div class="col-2" id="C4-two-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">200</button>
+					<button id="cat4-200" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C4-200pt-Answer">200</button>
 				</div>
 			</div>
 			<div class="col-2" id="C5-two-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">200</button>
+					<button id="cat5-200" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C5-200pt-Answer">200</button>
 				</div>
 			</div>
 			<div class="col-1">
@@ -128,27 +375,27 @@
 			</div>
 			<div class="col-2" id="C1-three-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">300</button>
+					<button id="cat1-300" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C1-300pt-Answer">300</button>
 				</div>
 			</div>
 			<div class="col-2" id="C2-three-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">300</button>
+					<button id="cat2-300" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C2-300pt-Answer">300</button>
 				</div>
 			</div>
 			<div class="col-2" id="C3-three-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">300</button>
+					<button id="cat3-300" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C3-300pt-Answer">300</button>
 				</div>
 			</div>
 			<div class="col-2" id="C4-three-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">300</button>
+					<button id="cat4-300" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C4-300pt-Answer">300</button>
 				</div>
 			</div>
 			<div class="col-2" id="C5-three-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">300</button>
+					<button id="cat5-300" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C5-300pt-Answer">300</button>
 				</div>
 			</div>
 			<div class="col-1">
@@ -161,27 +408,27 @@
 			</div>
 			<div class="col-2" id="C1-four-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">400</button>
+					<button id="cat1-400" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C1-400pt-Answer">400</button>
 				</div>
 			</div>
 			<div class="col-2" id="C2-four-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">400</button>
+					<button id="cat2-400" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C2-400pt-Answer">400</button>
 				</div>
 			</div>
 			<div class="col-2" id="C3-four-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">400</button>
+					<button id="cat3-400" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C3-400pt-Answer">400</button>
 				</div>
 			</div>
 			<div class="col-2" id="C4-four-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">400</button>
+					<button id="cat4-400" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C4-400pt-Answer">400</button>
 				</div>
 			</div>
 			<div class="col-2" id="C5-four-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">400</button>
+					<button id="cat5-400" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C5-400pt-Answer">400</button>
 				</div>
 			</div>
 			<div class="col-1">
@@ -194,27 +441,27 @@
 			</div>
 			<div class="col-2" id="C1-five-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">500</button>
+					<button id="cat1-500" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C1-500pt-Answer">500</button>
 				</div>
 			</div>
 			<div class="col-2" id="C2-five-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">500</button>
+					<button id="cat2-500" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C2-500pt-Answer">500</button>
 				</div>
 			</div>
 			<div class="col-2" id="C3-five-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">500</button>
+					<button id="cat3-500" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C3-500pt-Answer">500</button>
 				</div>
 			</div>
 			<div class="col-2" id="C4-five-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">500</button>
+					<button id="cat4-500" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C4-500pt-Answer">500</button>
 				</div>
 			</div>
 			<div class="col-2" id="C5-five-hundred">
 				<div class="textContainer">
-					<button class="btn btn-primary" type="submit">500</button>
+					<button id="cat5-500" type="button" class="btn btn-primary question-select" data-toggle="modal" data-target="#active-modal" data-whatever="C5-500pt-Answer">500</button>
 				</div>
 			</div>
 			<div class="col-1">
@@ -238,100 +485,6 @@
 			</div>
 		</div>
 	</div>
-
-	<button id="test-button">Test Button</button>
-
-	<div class="modal-overlay"></div>
-
-	<div class="active-modal">
-		<div>
-			<button class="close" id="close-question">Next Round?</button>
-			<h2 id="category-text">Category Name - #00 pts:</h2>
-			<p id="question-text">Test test test test test test test test test test test this is only a test to see if this will appear.</p>
-		</div>
-	</div>
-
-	<!-- Modal Template 1 -->
-
-<!-- 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">New message</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form>
-						<div class="form-group">
-							<label for="recipient-name" class="form-control-label">Recipient:</label>
-							<input type="text" class="form-control" id="recipient-name">
-						</div>
-						<div class="form-group">
-							<label for="message-text" class="form-control-label">Message:</label>
-							<textarea class="form-control" id="message-text"></textarea>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Send message</button>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<!-- Modal Template 2 -->
-
-	<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="myModalLabel">Modal title</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-4">.col-md-4</div>
-							<div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
-						</div>
-						<div class="row">
-							<div class="col-md-3 ml-auto">.col-md-3 .ml-auto</div>
-							<div class="col-md-2 ml-auto">.col-md-2 .ml-auto</div>
-						</div>
-						<div class="row">
-							<div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-9">
-								Level 1: .col-sm-9
-								<div class="row">
-									<div class="col-8 col-sm-6">
-										Level 2: .col-8 .col-sm-6
-									</div>
-									<div class="col-4 col-sm-6">
-										Level 2: .col-4 .col-sm-6
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">Save changes</button>
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div> -->
 
 	<script src="scripts/app.js"></script>
 </body>

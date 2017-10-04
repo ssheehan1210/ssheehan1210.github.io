@@ -2,16 +2,351 @@
 	text-align: center;
 	width: 100%;
 	height: 100%;
-	margin: 0;
-	padding: 0;
+/*	margin: 0;
+	padding: 0;*/
 	font-family: 'Open Sans', sans-serif;
 }
 
-.container-fluid {
-	margin: 0;
-	padding: 0;
+#active-modal {
 	width: 100%;
 	height: 100%;
+}
+
+#question-space {
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+
+#question-content {
+/*	width: 100%;
+*/	height: 100%;
+}
+
+#question-header {
+	height: 10%;
+	margin: 0;
+	padding: 0;
+}
+
+#question-title-board {
+	padding: 0;
+}
+
+#question-title-display h5 {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+}
+
+#question-body {
+	height: 80%;
+	margin: 0;
+	padding: 0;
+}
+
+#question-board {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#modal-row-one {
+	height: 10%;
+}
+
+#modal-row-one h6 {
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#modal-row-two {
+	height: 10%;
+}
+
+#modal-row-two h6 {
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#modal-row-three {
+	height: 60%;
+}
+
+#question-text {
+	height: 100%;
+}
+
+#question-text p {
+	height: 100%;
+	max-height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#modal-row-four {
+	height: 20%;
+}
+
+#modal-row-four h6 {
+	height: 35%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#modal-row-four textarea {
+	height: 50%;
+	font-size: 1.5rem;
+}
+
+#question-footer {
+	height: 10%;
+	margin: 0;
+	padding: 0;
+}
+
+#question-footer button {
+	height: 80%;
+	margin: 0 4px;
+}
+
+/*#test-button {
+	width: 10%;
+	height: 10%;
+}*/
+
+#answer-modal {
+	width: 100%;
+	height: 100%;
+}
+
+#answer-space {
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+
+#answer-content {
+/*	width: 100%;
+*/	height: 100%;
+}
+
+#answer-header {
+	height: 10%;
+	margin: 0;
+	padding: 0;
+}
+
+#answer-title-board {
+	padding: 0;
+}
+
+#answer-title-display h5 {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+}
+
+#answer-body {
+	height: 80%;
+	margin: 0;
+	padding: 0;
+}
+
+#answer-board {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#answer-modal-row-one {
+	height: 10%;
+}
+
+#answer-modal-row-one h6 {
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#answer-modal-row-two {
+	height: 10%;
+}
+
+#answer-modal-row-two h6 {
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#answer-modal-row-three {
+	height: 60%;
+}
+
+#answer-text {
+	height: 100%;
+}
+
+#answer-text p {
+	height: 100%;
+	max-height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#answer-modal-row-four {
+	height: 20%;
+}
+
+#answer-modal-row-four h6 {
+	height: 35%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#answer-modal-row-four textarea {
+	height: 50%;
+	font-size: 1.5rem;
+}
+
+#answer-footer {
+	height: 10%;
+	margin: 0;
+	padding: 0;
+}
+
+#answer-footer button {
+	height: 80%;
+	margin: 0 4px;
+}
+
+#incorrect-modal {
+	width: 100%;
+	height: 100%;
+}
+
+#incorrect-space {
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+
+#incorrect-content {
+/*	width: 100%;
+*/	height: 100%;
+}
+
+#incorrect-header {
+	height: 10%;
+	margin: 0;
+	padding: 0;
+}
+
+#incorrect-title-board {
+	padding: 0;
+}
+
+#incorrect-title-display h5 {
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+}
+
+#incorrect-body {
+	height: 80%;
+	margin: 0;
+	padding: 0;
+}
+
+#incorrect-board {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#incorrect-modal-row-one {
+	height: 10%;
+}
+
+#incorrect-modal-row-one h6 {
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#incorrect-modal-row-two {
+	height: 10%;
+}
+
+#incorrect-modal-row-two h6 {
+	height: 50%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#incorrect-modal-row-three {
+	height: 60%;
+}
+
+#incorrect-text {
+	height: 100%;
+}
+
+#incorrect-text p {
+	height: 100%;
+	max-height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#incorrect-modal-row-four {
+	height: 20%;
+}
+
+#incorrect-modal-row-four h6 {
+	height: 35%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+#incorrect-modal-row-four textarea {
+	height: 50%;
+	font-size: 1.5rem;
+}
+
+#incorrect-footer {
+	height: 10%;
+	margin: 0;
+	padding: 0;
+}
+
+#incorrect-footer button {
+	height: 80%;
+	margin: 0 4px;
+}
+
+#game-board {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	text-align: center;
 }
 
 .row {
@@ -384,7 +719,7 @@ div.textContainer button {
 	display: inline-block;
 }
 
-.active-modal {
+/*#active-modal {
 	display: none;
 	position: fixed;
 	top: 50%;
@@ -396,11 +731,11 @@ div.textContainer button {
 	max-height: 100%;
 	background: white;
 	box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
-	z-index: 10002;
+	z-index: 10002;*/
 	/*animation: modal-animate 2s;*/ /* It works, but it animates off in a corner. Will need to fix. */
-}
-
-.close {
+/*}
+*/
+/*.close {
 	background: #606061;
 	color: #FFFFFF;
 	line-height: 25px;
@@ -418,11 +753,11 @@ div.textContainer button {
 	-moz-box-shadow: 1px 1px 3px #000;
 	-webkit-box-shadow: 1px 1px 3px #000;
 	box-shadow: 1px 1px 3px #000;
-}
+}*/
 
-.close:hover { background: #00d9ff; }
-
-.modal-overlay {
+/*.close:hover { background: #00d9ff; }
+*/
+/*.modal-overlay {
 	display: none;
 	z-index: 10001;
 	position: fixed;
@@ -431,4 +766,4 @@ div.textContainer button {
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.6);
-}
+}*/
