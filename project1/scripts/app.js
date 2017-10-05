@@ -62,6 +62,7 @@ $.ajax({
 				$televisionQuestion.append($teleQuestionFive);
 				$('.tv-question').text(res.clues[215].question);
 			}
+			e.relatedTarget.disabled = true;
 		});
 		$('#active-modal').on('hidden.bs.modal', (e) => {
 			$('.tv-question').remove();
@@ -112,6 +113,7 @@ $.ajax({
 				$videoQuestion.append($videoQuestionFive);
 				$('.video-question').text(res.clues[14].question);
 			}
+			e.relatedTarget.disabled = true;
 		});
 		$('#active-modal').on('hidden.bs.modal', (e) => {
 			$('.video-question').remove();
@@ -162,6 +164,7 @@ $.ajax({
 				$movieQuestion.append($movieQuestionFive);
 				$('.movie-question').text(res.clues[4].question);
 			}
+			e.relatedTarget.disabled = true;
 		});
 		$('#active-modal').on('hidden.bs.modal', (e) => {
 			$('.movie-question').remove();
@@ -212,6 +215,7 @@ $.ajax({
 				$comicQuestion.append($comicQuestionFive);
 				$('.comic-question').text(res.clues[0].question);
 			}
+			e.relatedTarget.disabled = true;
 		});
 		$('#active-modal').on('hidden.bs.modal', (e) => {
 			$('.comic-question').remove();
@@ -237,6 +241,7 @@ $.ajax({
 				$pokeImageOne.attr('src', res.sprites.front_default);
 				$firstPokeQuestion.append($pokeImageOne);
 			}
+			e.relatedTarget.disabled = true;
 		});
 		$('#active-modal').on('hidden.bs.modal', (e) => {
 			$('#first-poke-image').remove();
@@ -262,6 +267,7 @@ $.ajax({
 				$pokeImageTwo.attr('src', res.sprites.front_default);
 				$secondPokeQuestion.append($pokeImageTwo);
 			}
+			e.relatedTarget.disabled = true;
 		});
 		$('#active-modal').on('hidden.bs.modal', (e) => {
 			$('#second-poke-image').remove();
@@ -287,6 +293,7 @@ $.ajax({
 				$pokeImageThree.attr('src', res.sprites.front_default);
 				$thirdPokeQuestion.append($pokeImageThree);
 			}
+			e.relatedTarget.disabled = true;
 		});
 		$('#active-modal').on('hidden.bs.modal', (e) => {
 			$('#third-poke-image').remove();
@@ -312,6 +319,7 @@ $.ajax({
 				$pokeImageFour.attr('src', res.sprites.front_default);
 				$fourthPokeQuestion.append($pokeImageFour);
 			}
+			e.relatedTarget.disabled = true;
 		});
 		$('#active-modal').on('hidden.bs.modal', (e) => {
 			$('#fourth-poke-image').remove();
@@ -337,6 +345,7 @@ $.ajax({
 				$pokeImageFive.attr('src', res.sprites.front_default);
 				$fifthPokeQuestion.append($pokeImageFive);
 			}
+			e.relatedTarget.disabled = true;
 		});
 		$('#active-modal').on('hidden.bs.modal', (e) => {
 			$('#fifth-poke-image').remove();
@@ -372,6 +381,7 @@ $('.question-select').on('click', (e) => {
 	$('#buzzer-button').on('click', () => {
 		console.log("Buzzer button is still working!!!");
 	});
+
 });
 
 $('#answer-button').on('click', () => {
