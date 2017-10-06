@@ -11,6 +11,12 @@ Whether you get the correct answer or not, once you are back to the main game bo
 
 The game will end when all of the questions have been asked/answered and the player with the most points wins the game!
 
+[Click Here to Play Jeopardy](https://ssheehan1210.github.io/project1/)
+*Note: The version of this game in the link above still needs some work with the AJAX in order for the questions and answers to appear. It does, however, work straight from a local terminal.*
+
+
+***
+
 ### Technology Used:
 - HTML5
 - CSS
@@ -18,6 +24,8 @@ The game will end when all of the questions have been asked/answered and the pla
 - Bootstrap
 - jQuery
 - AJAX
+
+***
 
 ### User Stories:
 1. As a User, I want to be able to access the game board so I can play the game with a second player.
@@ -28,6 +36,8 @@ The game will end when all of the questions have been asked/answered and the pla
 6. As an Admin, I want the boxes to each answered question to be deactivated so that they won't be selected again.
 7. As a User in the role of Player 1, I want it to be my turn at the beginning and whenever my opponent finishes his turn regardless of whether Player 2 got it right or wrong, as well as whenever time runs out for Player 2.
 8. As an Admin, I want a victory window to appear when all the questions have been answered and reveal who the winner is.
+
+***
 
 ### What I Want To Add In The Future:
 - Catchy background music.
