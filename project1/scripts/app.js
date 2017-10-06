@@ -23,7 +23,7 @@ $('#p2-points-display').text(`${playerTwoName}: ${playerTwoScore}pts`);
 
 
 $.ajax({
-	url: 'https://jservice.io/api/category',
+	url: 'http://jservice.io/api/category',
 	type: 'GET',
 	dataType: 'Json',
 	data: { id: 67 }, // Television category
@@ -74,7 +74,7 @@ $.ajax({
 })
 
 $.ajax({
-	url: 'https://jservice.io/api/category',
+	url: 'http://jservice.io/api/category',
 	type: 'GET',
 	dataType: 'Json',
 	data: { id: 1892 }, // Video Games category
@@ -125,7 +125,7 @@ $.ajax({
 })
 
 $.ajax({
-	url: 'https://jservice.io/api/category',
+	url: 'http://jservice.io/api/category',
 	type: 'GET',
 	dataType: 'Json',
 	data: { id: 309 }, // Movies category
@@ -176,7 +176,7 @@ $.ajax({
 })
 
 $.ajax({
-	url: 'https://jservice.io/api/category',
+	url: 'http://jservice.io/api/category',
 	type: 'GET',
 	dataType: 'Json',
 	data: { id: 760 }, // Comic Books category
