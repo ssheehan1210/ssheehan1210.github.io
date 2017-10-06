@@ -2,9 +2,32 @@
 	text-align: center;
 	width: 100%;
 	height: 100%;
-/*	margin: 0;
-	padding: 0;*/
+	background: url('http://miriadna.com/desctopwalls/images/max/To-the-horizon.jpg') no-repeat center center fixed;
 	font-family: 'Open Sans', sans-serif;
+}
+
+span {
+	background: white;
+}
+
+h6 {
+	background: white;
+}
+
+.col-1 {
+	background: white;
+}
+
+.col-1 button {
+	background: white;
+}
+
+.col-5 {
+	background: white;
+}
+
+.col-10 {
+	background: white;
 }
 
 #active-modal {
@@ -20,8 +43,7 @@
 }
 
 #question-content {
-/*	width: 100%;
-*/	height: 100%;
+	height: 100%;
 }
 
 #question-header {
@@ -37,6 +59,7 @@
 #question-title-display h5 {
 	margin: 0;
 	padding: 0;
+	background: white;
 	font-size: 2rem;
 }
 
@@ -67,6 +90,18 @@
 	height: 10%;
 }
 
+#modal-row-two div {
+	background: white;
+}
+
+#question-p1-turn {
+	background: white;
+}
+
+#question-p2-turn {
+	background: white;
+}
+
 #modal-row-two h6 {
 	height: 50%;
 	margin: 0;
@@ -88,6 +123,7 @@
 	margin: 0;
 	padding: 0;
 	font-size: 1.5rem;
+	background: white;
 }
 
 #modal-row-four {
@@ -98,11 +134,13 @@
 	height: 35%;
 	margin: 0;
 	padding: 0;
+	background: white;
 	font-size: 1.5rem;
 }
 
 #modal-row-four textarea {
 	height: 50%;
+	background: white;
 	font-size: 1.5rem;
 }
 
@@ -110,6 +148,7 @@
 	height: 10%;
 	margin: 0;
 	padding: 0;
+	background: white;
 }
 
 #question-footer button {
@@ -117,10 +156,9 @@
 	margin: 0 4px;
 }
 
-/*#test-button {
-	width: 10%;
-	height: 10%;
-}*/
+#answer-button {
+	background: rgb(6,12,233);
+}
 
 #answer-modal {
 	width: 100%;
@@ -135,8 +173,7 @@
 }
 
 #answer-content {
-/*	width: 100%;
-*/	height: 100%;
+	height: 100%;
 }
 
 #answer-header {
@@ -152,6 +189,7 @@
 #answer-title-display h5 {
 	margin: 0;
 	padding: 0;
+	background: white;
 	font-size: 2rem;
 }
 
@@ -171,6 +209,10 @@
 	height: 10%;
 }
 
+#answer-timer-display {
+	background: white;
+}
+
 #answer-modal-row-one h6 {
 	height: 50%;
 	margin: 0;
@@ -180,6 +222,18 @@
 
 #answer-modal-row-two {
 	height: 10%;
+}
+
+#answer-modal-row-two div {
+	background: white;
+}
+
+#answer-p1-turn {
+	background: white;
+}
+
+#answer-p2-turn {
+	background: white;
 }
 
 #answer-modal-row-two h6 {
@@ -203,6 +257,7 @@
 	margin: 0;
 	padding: 0;
 	font-size: 1.5rem;
+	background: white;
 }
 
 #answer-modal-row-four {
@@ -225,11 +280,16 @@
 	height: 10%;
 	margin: 0;
 	padding: 0;
+	background: white;
 }
 
 #answer-footer button {
 	height: 80%;
 	margin: 0 4px;
+}
+
+#correct-return-button {
+	background: rgb(6,12,233);
 }
 
 #incorrect-modal {
@@ -245,8 +305,7 @@
 }
 
 #incorrect-content {
-/*	width: 100%;
-*/	height: 100%;
+	height: 100%;
 }
 
 #incorrect-header {
@@ -262,6 +321,7 @@
 #incorrect-title-display h5 {
 	margin: 0;
 	padding: 0;
+	background: white;
 	font-size: 2rem;
 }
 
@@ -281,6 +341,10 @@
 	height: 10%;
 }
 
+#incorrect-timer-display {
+	background: white;
+}
+
 #incorrect-modal-row-one h6 {
 	height: 50%;
 	margin: 0;
@@ -290,6 +354,18 @@
 
 #incorrect-modal-row-two {
 	height: 10%;
+}
+
+#incorrect-modal-row-two div {
+	background: white;
+}
+
+#incorrect-p1-turn {
+	background: white;
+}
+
+#incorrect-p2-turn {
+	background: white;
 }
 
 #incorrect-modal-row-two h6 {
@@ -313,6 +389,7 @@
 	margin: 0;
 	padding: 0;
 	font-size: 1.5rem;
+	background: white;
 }
 
 #incorrect-modal-row-four {
@@ -335,11 +412,16 @@
 	height: 10%;
 	margin: 0;
 	padding: 0;
+	background: white;
 }
 
 #incorrect-footer button {
 	height: 80%;
 	margin: 0 4px;
+}
+
+#incorrect-return-button {
+	background: rgb(6,12,233);
 }
 
 #game-board {
@@ -349,284 +431,205 @@
 	text-align: center;
 }
 
-.row {
-/*	margin-left: 0px;
-	margin-right: 0px;*/
+#game-board .col-1 {
+	background: unset;
 }
 
 div#title-row {
 	height: 11%;
-	background-color: grey;
-}
-
-div#title-display {
-	background-color: white;
 }
 
 #title-display h1 {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
+	color: white;
+	font-size: 3rem;
 }
 
 div#category-row {
 	height: 13%;
-	background-color: blue;
 }
 
-div#category-one-title {
-	background-color: red;
+#category-one-title div {
+	background: rgb(6,12,233);
 }
 
-div#category-two-title {
-	background-color: blue;
+#category-two-title div {
+	background: rgb(6,12,233);
 }
 
-div#category-three-title {
-	background-color: pink;
+#category-three-title div {
+	background: rgb(6,12,233);
 }
 
-div#category-four-title {
-	background-color: blue;
+#category-four-title div {
+	background: rgb(6,12,233);
 }
 
-div#category-five-title {
-	background-color: red;
+#category-five-title div {
+	background: rgb(6,12,233);
+}
+
+h4.text-center {
+	background: rgb(6,12,233);
+	color: white;
 }
 
 div#one-hundred-row {
 	height: 13%;
-	background-color: green;
 }
 
-div#C1-one-hundred {
-	background-color: red;
+#cat1-100 {
+	background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/H3ymyCH1xiuhvo4rx/television-screen-with-static-noise-caused-by-bad-signal-reception_hisblojul_thumbnail-small01.jpg') no-repeat center/100% 100%;
+	color: white;
 }
 
-#C1-one-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C2-one-hundred {
-	background-color: blue;
+#cat2-100 {
+	background: black;
+	color: rgb(0,191,255);
 }
 
-#C2-one-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C3-one-hundred {
-	background-color: pink;
+#cat3-100 {
+	background: url('http://diysolarpanelsv.com/images/film-clipart-border-13.jpg') no-repeat center/100% 100%;
+	color: black;
 }
 
-#C3-one-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C4-one-hundred {
-	background-color: blue;
+#cat4-100 {
+	background: url('https://static.vecteezy.com/system/resources/previews/000/096/903/non_2x/blank-comic-style-background-illustration-vector.jpg') no-repeat center/100% 100%;
+	color: red;
+	font-weight: 900;
 }
 
-#C4-one-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C5-one-hundred {
-	background-color: red;
+#cat5-100 {
+	background: red;
 }
-
-#C5-one-hundred h5 {
-/*	vertical-align: middle;
-*/}
 
 div#two-hundred-row {
 	height: 13%;
-	background-color: yellow;
 }
 
-div#C1-two-hundred {
-	background-color: red;
+#cat1-200 {
+	background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/H3ymyCH1xiuhvo4rx/television-screen-with-static-noise-caused-by-bad-signal-reception_hisblojul_thumbnail-small01.jpg') no-repeat center/100% 100%;
+	color: white;
 }
 
-#C1-two-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C2-two-hundred {
-	background-color: blue;
+#cat2-200 {
+	background: black;
+	color: rgb(0,191,255);
 }
 
-#C2-two-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C3-two-hundred {
-	background-color: pink;
+#cat3-200 {
+	background: url('http://diysolarpanelsv.com/images/film-clipart-border-13.jpg') no-repeat center/100% 100%;
+	color: black;
 }
 
-#C3-two-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C4-two-hundred {
-	background-color: blue;
+#cat4-200 {
+	background: url('https://static.vecteezy.com/system/resources/previews/000/096/903/non_2x/blank-comic-style-background-illustration-vector.jpg') no-repeat center/100% 100%;
+	color: red;
+	font-weight: 900;
 }
 
-#C4-two-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C5-two-hundred {
-	background-color: red;
+#cat5-200 {
+	background: red;
 }
-
-#C5-two-hundred h5 {
-/*	vertical-align: middle;
-*/}
 
 div#three-hundred-row {
 	height: 13%;
-	background-color: purple;
 }
 
-div#C1-three-hundred {
-	background-color: red;
+#cat1-300 {
+	background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/H3ymyCH1xiuhvo4rx/television-screen-with-static-noise-caused-by-bad-signal-reception_hisblojul_thumbnail-small01.jpg') no-repeat center/100% 100%;
+	color: white;
 }
 
-#C1-three-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C2-three-hundred {
-	background-color: blue;
+#cat2-300 {
+	background: black;
+	color: rgb(0,191,255);
 }
 
-#C2-three-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C3-three-hundred {
-	background-color: pink;
+#cat3-300 {
+	background: url('http://diysolarpanelsv.com/images/film-clipart-border-13.jpg') no-repeat center/100% 100%;
+	color: black;
 }
 
-#C3-three-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C4-three-hundred {
-	background-color: blue;
+#cat4-300 {
+	background: url('https://static.vecteezy.com/system/resources/previews/000/096/903/non_2x/blank-comic-style-background-illustration-vector.jpg') no-repeat center/100% 100%;
+	color: red;
+	font-weight: 900;
 }
 
-#C4-three-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C5-three-hundred {
-	background-color: red;
+#cat5-300 {
+	background: black;
 }
-
-#C5-three-hundred h5 {
-/*	vertical-align: middle;
-*/}
 
 div#four-hundred-row {
 	height: 13%;
-	background-color: orange;
 }
 
-div#C1-four-hundred {
-	background-color: red;
+#cat1-400 {
+	background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/H3ymyCH1xiuhvo4rx/television-screen-with-static-noise-caused-by-bad-signal-reception_hisblojul_thumbnail-small01.jpg') no-repeat center/100% 100%;
+	color: white;
 }
 
-#C1-four-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C2-four-hundred {
-	background-color: blue;
+#cat2-400 {
+	background: black;
+	color: rgb(0,191,255);
 }
 
-#C2-four-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C3-four-hundred {
-	background-color: pink;
+#cat3-400 {
+	background: url('http://diysolarpanelsv.com/images/film-clipart-border-13.jpg') no-repeat center/100% 100%;
+	color: black;
 }
 
-#C3-four-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C4-four-hundred {
-	background-color: blue;
+#cat4-400 {
+	background: url('https://static.vecteezy.com/system/resources/previews/000/096/903/non_2x/blank-comic-style-background-illustration-vector.jpg') no-repeat center/100% 100%;
+	color: red;
+	font-weight: 900;
 }
 
-#C4-four-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C5-four-hundred {
-	background-color: red;
+#cat5-400 {
+	background: white;
+	color: black;
 }
-
-#C5-four-hundred h5 {
-/*	vertical-align: middle;
-*/}
 
 div#five-hundred-row {
 	height: 13%;
-	background-color: grey;
 }
 
-div#C1-five-hundred {
-	background-color: red;
+#cat1-500 {
+	background: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/H3ymyCH1xiuhvo4rx/television-screen-with-static-noise-caused-by-bad-signal-reception_hisblojul_thumbnail-small01.jpg') no-repeat center/100% 100%;
+	color: white;
 }
 
-#C1-five-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C2-five-hundred {
-	background-color: blue;
+#cat2-500 {
+	background: black;
+	color: rgb(0,191,255);
 }
 
-#C2-five-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C3-five-hundred {
-	background-color: pink;
+#cat3-500 {
+	background: url('http://diysolarpanelsv.com/images/film-clipart-border-13.jpg') no-repeat center/100% 100%;
+	color: black;
 }
 
-#C3-five-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C4-five-hundred {
-	background-color: blue;
+#cat4-500 {
+	background: url('https://static.vecteezy.com/system/resources/previews/000/096/903/non_2x/blank-comic-style-background-illustration-vector.jpg') no-repeat center/100% 100%;
+	color: red;
+	font-weight: 900;
 }
 
-#C4-five-hundred h5 {
-/*	vertical-align: middle;
-*/}
-
-div#C5-five-hundred {
-	background-color: red;
+#cat5-500 {
+	background: white;
+	color: black;
 }
-
-#C5-five-hundred h5 {
-/*	vertical-align: middle;
-*/}
 
 div#players-row {
 	height: 11%;
-	background-color: red;
 }
 
 div#player-one-display {
 	height: 100%;
-	background-color: grey;
+	background: unset;
 }
 
 div#p1-points-display {
@@ -638,6 +641,8 @@ h5#p1-points-display {
 	margin: 0;
 	padding: 0;
 	line-height: 2;
+	background: grey;
+	color: white;
 }
 
 div#p1-turn-indicator {
@@ -649,11 +654,13 @@ h5#p1-turn-indicator {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
+	background: green;
+	color: white;
 }
 
 div#player-two-display {
 	height: 100%;
-	background-color: green;
+	background: unset;
 }
 
 div#p2-points-display {
@@ -665,6 +672,8 @@ h5#p2-points-display {
 	margin: 0;
 	padding: 0;
 	line-height: 2;
+	background: grey;
+	color: white;
 }
 
 div#p2-turn-indicator {
@@ -676,6 +685,8 @@ h5#p2-turn-indicator {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5;
+	background: green;
+	color: white;
 }
 
 div.textContainer {
@@ -718,52 +729,3 @@ div.textContainer button {
 	vertical-align: middle;
 	display: inline-block;
 }
-
-/*#active-modal {
-	display: none;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 600px;
-	max-width: 100%;
-	height: 400px;
-	max-height: 100%;
-	background: white;
-	box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
-	z-index: 10002;*/
-	/*animation: modal-animate 2s;*/ /* It works, but it animates off in a corner. Will need to fix. */
-/*}
-*/
-/*.close {
-	background: #606061;
-	color: #FFFFFF;
-	line-height: 25px;
-	position: absolute;
-	right: -45px;
-	text-align: center;
-	top: -16px;
-	width: 90px;
-	height: 34px;
-	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
-}*/
-
-/*.close:hover { background: #00d9ff; }
-*/
-/*.modal-overlay {
-	display: none;
-	z-index: 10001;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-}*/

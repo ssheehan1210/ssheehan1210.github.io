@@ -1,13 +1,13 @@
 console.log("Window is running");
 
-let turnTime = 10;
-let buzzerTime = 10;
+let turnTime = 15;
+let roundNumber = 1;
 
 const playerOneNumber = 1;
 const playerTwoNumber = 2;
-let playerOneName = "Sam";
+let playerOneName = "Player 1";
 let playerOneScore = 0;
-let playerTwoName = "James";
+let playerTwoName = "Player 2";
 let playerTwoScore = 0;
 
 let currentPlayerTurn = playerOneNumber;
@@ -378,45 +378,69 @@ $('.question-select').on('click', (e) => {
 		$('#active-modalLabel').text(`Pokemon for ${e.currentTarget.innerText}:`);
 	}
 
-	$('#buzzer-button').on('click', () => {
-		console.log("Buzzer button is still working!!!");
-	});
+	$('#p1-question-name').text(`${playerOneName}`);
+	$('#p2-question-name').text(`${playerTwoName}`);
 
+	$('#p1-points-counter').text(`Points: ${playerOneScore}`);
+	$('#p2-points-counter').text(`Points: ${playerTwoScore}`);
+
+	if (currentPlayerTurn === playerOneNumber) {
+		$('#question-p1-indicator').show();
+		$('#question-p2-indicator').hide();
+	} else if (currentPlayerTurn === playerTwoNumber) {
+		$('#question-p1-indicator').hide();
+		$('#question-p2-indicator').show();
+	}
 });
 
 $('#answer-button').on('click', () => {
 	console.log("Answer button is still working!!!");
-	// clearInterval(timer);
 	if ($('#message-text')[0].value === correctAnswerText) { // if player's answer is right
 		console.log("Player One: " + playerOneScore);
 		console.log("Player Two: " + playerTwoScore);
-		turnTime = 10;
+		turnTime = 15;
 		correctAnswer = true;
 		if (currentPlayerTurn === playerOneNumber) {
 			playerOneScore += potentialScore;
 		} else if (currentPlayerTurn === playerTwoNumber) {
 			playerTwoScore += potentialScore;
 		}
+
+		$('#p1-correct-name').text(`${playerOneName}`);
+		$('#p2-correct-name').text(`${playerTwoName}`);
+
+		$('#p1-correct-points').text(`Points: ${playerOneScore}`);
+		$('#p2-correct-points').text(`Points: ${playerTwoScore}`);
+
 	} else if ($('#message-text')[0].value ==! correctAnswerText) { // if the answer is wrong
 		console.log("Player One: " + playerOneScore);
 		console.log("Player Two: " + playerTwoScore);
-		turnTime = 10;
+		turnTime = 15;
 		correctAnswer = false;
 		if (currentPlayerTurn === playerOneNumber) {
 			playerOneScore += 0;
 		} else if (currentPlayerTurn === playerTwoNumber) {
 			playerTwoScore += 0;
 		}
+
+		$('#p1-incorrect-name').text(`${playerOneName}`);
+		$('#p2-incorrect-name').text(`${playerTwoName}`);
+
+		$('#p1-incorrect-points').text(`Points: ${playerOneScore}`);
+		$('#p2-incorrect-points').text(`Points: ${playerTwoScore}`);
 	}
 });
 
 $('#correct-return-button').on('click', () => {
 	console.log("Return to the Game");
-	console.log(playerOneScore);
 	if (currentPlayerTurn === playerOneNumber) {
 		currentPlayerTurn = playerTwoNumber;
+		$('#p1-turn-indicator').toggle();
+		$('#p2-turn-indicator').toggle();
 	} else if (currentPlayerTurn === playerTwoNumber) {
 		currentPlayerTurn = playerOneNumber;
+		$('#p1-turn-indicator').toggle();
+		$('#p2-turn-indicator').toggle();
 	}
 	console.log(currentPlayerTurn);
 	console.log("Does this look right?");
@@ -426,14 +450,20 @@ $('#correct-return-button').on('click', () => {
 
 $('#incorrect-return-button').on('click', () => {
 	console.log("Now returning");
-	console.log(playerOneScore);
 	if (currentPlayerTurn === playerOneNumber) {
 		currentPlayerTurn = playerTwoNumber;
+		$('#p1-turn-indicator').toggle();
+		$('#p2-turn-indicator').toggle();
 	} else if (currentPlayerTurn === playerTwoNumber) {
 		currentPlayerTurn = playerOneNumber;
+		$('#p1-turn-indicator').toggle();
+		$('#p2-turn-indicator').toggle();
 	}
 	console.log(currentPlayerTurn);
 	console.log("Does this look right?");
+
+	roundNumber++;
+
 	$('#p1-points-display').text(`${playerOneName}: ${playerOneScore}pts`);
 	$('#p2-points-display').text(`${playerTwoName}: ${playerTwoScore}pts`);
 });
@@ -447,19 +477,38 @@ const setTimer = () => {
 
 		if (correctAnswer === true) {
 			clearInterval(timer);
-			// $('#active-modal').modal('toggle');
 			$('#answer-modal').modal('toggle');
-			turnTime = 10;
-		} else if (correctAnswer === false || turnTime === 0) {
+			turnTime = 15;
+		} else if (correctAnswer === false) {
 			clearInterval(timer);
-			// $('#active-modal').modal('toggle');
 			$('#incorrect-modal').modal('toggle');
-			turnTime = 10;
+			turnTime = 15;
+		} else if (turnTime === 0) {
+			clearInterval(timer);
+			$('#active-modal').modal('hide');
+			$('#incorrect-modal').modal('toggle');
+			$('#p1-incorrect-name').text(`${playerOneName}`);
+			$('#p2-incorrect-name').text(`${playerTwoName}`);
+			$('#p1-incorrect-points').text(`Points: ${playerOneScore}`);
+			$('#p2-incorrect-points').text(`Points: ${playerTwoScore}`);
+			turnTime = 15;
 		}
 
 		$('#timer-counter').text(`${turnTime}s`); // updates the time on the board
 
 	}, 1000); // each interval happens after every second
+}
+
+
+
+if (roundNumber > 25) {
+	if (playerOneScore > playerTwoScore) {
+		alert("GAME OVER! The winner is: " + playerOneName + "!");
+	} else if (playerTwoScore > playerOneScore) {
+		alert("GAME OVER! The winner is: " + playerTwoName + "!");
+	} else if (playerOneScore === playerTwoScore) {
+		alert("GAME OVER! This game is a draw!");
+	}
 }
 
 

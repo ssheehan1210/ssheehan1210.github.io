@@ -37,27 +37,27 @@
 					<div class="container-fluid" id="question-board">
 						<div class="row no-gutters" id="modal-row-one">
 							<div class="col-5" id="question-p1-display">
-								<h6>Player 1</h6>
+								<h6 id="p1-question-name">Player 1</h6>
 								<h6 id="p1-points-counter">Points: #00</h6>
 							</div>
 							<div class="col-2" id="question-timer-display">
 								<h6>Timer</h6>
-								<h6 id="timer-counter">10s</h6>
+								<h6 id="timer-counter">15s</h6>
 							</div>
 							<div class="col-5" id="question-p2-display">
-								<h6>Player 2</h6>
+								<h6 id="p2-question-name">Player 2</h6>
 								<h6 id="p2-points-counter">Points: #00</h6>
 							</div>
 						</div>
 						<div class="row no-gutters" id="modal-row-two">
 							<div class="col-5" id="question-p1-turn">
-								<h6>Your Turn!!!</h6>
+								<h6 id="question-p1-indicator">Your Turn!!!</h6>
 							</div>
 							<div class="col-2">
 								
 							</div>
 							<div class="col-5" id="question-p2-turn">
-								<h6>Your Turn!!!</h6>
+								<h6 id="question-p2-indicator">Your Turn!!!</h6>
 							</div>
 						</div>
 						<div class="row no-gutters" id="modal-row-three">
@@ -65,12 +65,7 @@
 								
 							</div>
 							<div class="col-10" id="question-text">
-								<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+
 							</div>
 							<div class="col-1">
 								
@@ -91,8 +86,7 @@
 					</div>
 				</div>
 				<div class="modal-footer" id="question-footer">
-					<button type="button" class="btn btn-primary" id="buzzer-button">Buzzer</button>
-					<button type="button" class="btn btn-secondary" id="answer-button" data-dismiss="modal">Submit Answer</button>
+					<button type="button" class="btn btn-primary" id="answer-button" data-dismiss="modal">Submit Answer</button>
 				</div>
 			</div>
 		</div>
@@ -108,7 +102,7 @@
 								
 							</div>
 							<div class="col-10" id="answer-title-display">
-								<h5 class="modal-title" id="answer-modalLabel">Category Name - #00pts</h5>
+								<h5 class="modal-title" id="answer-modalLabel">CORRECT!!!</h5>
 							</div>
 							<div class="col-1">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -122,27 +116,27 @@
 					<div class="container-fluid" id="answer-board">
 						<div class="row no-gutters" id="answer-modal-row-one">
 							<div class="col-5" id="answer-p1-display">
-								<h6>Player 1</h6>
-								<h6>Points: #00</h6>
+								<h6 id="p1-correct-name">Player 1</h6>
+								<h6 id="p1-correct-points">Points: #00</h6>
 							</div>
 							<div class="col-2" id="answer-timer-display">
-								<h6>Timer</h6>
-								<h6>0s</h6>
+								<h6 style="display: none">Timer</h6>
+								<h6 style="display: none">0s</h6>
 							</div>
 							<div class="col-5" id="answer-p2-display">
-								<h6>Player 2</h6>
-								<h6>Points: #00</h6>
+								<h6 id="p2-correct-name">Player 2</h6>
+								<h6 id="p2-correct-points">Points: #00</h6>
 							</div>
 						</div>
 						<div class="row no-gutters" id="answer-modal-row-two">
 							<div class="col-5" id="answer-p1-turn">
-								<h6>Your Turn!!!</h6>
+								<h6 style="display: none">Your Turn!!!</h6>
 							</div>
 							<div class="col-2">
 								
 							</div>
 							<div class="col-5" id="answer-p2-turn">
-								<h6>Your Turn!!!</h6>
+								<h6 style="display: none">Your Turn!!!</h6>
 							</div>
 						</div>
 						<div class="row no-gutters" id="answer-modal-row-three">
@@ -161,8 +155,8 @@
 
 							</div>
 							<div class="col-10">
-								<h6>Your Answer:</h6>
-								<textarea class="form-control" id="answer-message-text"></textarea>
+								<h6 style="display: none">Your Answer:</h6>
+								<textarea class="form-control" id="answer-message-text" style="display: none"></textarea>
 							</div>
 							<div class="col-1">
 
@@ -171,7 +165,7 @@
 					</div>
 				</div>
 				<div class="modal-footer" id="answer-footer">
-					<button type="button" class="btn btn-primary" id="correct-return-button" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-secondary" id="correct-return-button" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -187,7 +181,7 @@
 								
 							</div>
 							<div class="col-10" id="incorrect-title-display">
-								<h5 class="modal-title" id="incorrect-modalLabel">Category Name - #00pts</h5>
+								<h5 class="modal-title" id="incorrect-modalLabel">WRONG!!!</h5>
 							</div>
 							<div class="col-1">
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -201,27 +195,27 @@
 					<div class="container-fluid" id="incorrect-board">
 						<div class="row no-gutters" id="incorrect-modal-row-one">
 							<div class="col-5" id="incorrect-p1-display">
-								<h6>Player 1</h6>
-								<h6>Points: #00</h6>
+								<h6 id="p1-incorrect-name">Player 1</h6>
+								<h6 id="p1-incorrect-points">Points: #00</h6>
 							</div>
 							<div class="col-2" id="incorrect-timer-display">
-								<h6>Timer</h6>
-								<h6>0s</h6>
+								<h6 style="display: none">Timer</h6>
+								<h6 style="display: none">0s</h6>
 							</div>
 							<div class="col-5" id="incorrect-p2-display">
-								<h6>Player 2</h6>
-								<h6>Points: #00</h6>
+								<h6 id="p2-incorrect-name">Player 2</h6>
+								<h6 id="p2-incorrect-points">Points: #00</h6>
 							</div>
 						</div>
 						<div class="row no-gutters" id="incorrect-modal-row-two">
 							<div class="col-5" id="incorrect-p1-turn">
-								<h6>Your Turn!!!</h6>
+								<h6 style="display: none">Your Turn!!!</h6>
 							</div>
 							<div class="col-2">
 								
 							</div>
 							<div class="col-5" id="incorrect-p2-turn">
-								<h6>Your Turn!!!</h6>
+								<h6 style="display: none">Your Turn!!!</h6>
 							</div>
 						</div>
 						<div class="row no-gutters" id="incorrect-modal-row-three">
@@ -240,8 +234,8 @@
 
 							</div>
 							<div class="col-10">
-								<h6>Your Answer:</h6>
-								<textarea class="form-control" id="incorrect-message-text"></textarea>
+								<h6 style="display: none">Your Answer:</h6>
+								<textarea class="form-control" id="incorrect-message-text" style="display: none"></textarea>
 							</div>
 							<div class="col-1">
 
@@ -250,13 +244,11 @@
 					</div>
 				</div>
 				<div class="modal-footer" id="incorrect-footer">
-					<button type="button" class="btn btn-primary" id="incorrect-return-button" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-secondary" id="incorrect-return-button" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<!-- <button id="test-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#active-modal">Test Button</button> -->
 
 	<div class="container-fluid" id="game-board">
 		<div class="row no-gutters" id="title-row">
@@ -478,7 +470,7 @@
 			</div>
 			<div class="col-5" id="player-two-display">
 				<h5 id="p2-points-display">Player 2: #000 pts</h5>
-				<h5 id="p2-turn-indicator">Your Turn!</h5>
+				<h5 id="p2-turn-indicator" style="display: none">Your Turn!</h5>
 			</div>
 			<div class="col-1">
 				
